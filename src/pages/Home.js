@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import AppsIcon from '@material-ui/icons/Apps'
+import AppsIcon from "@material-ui/icons/Apps";
 import { Avatar } from "@material-ui/core";
+import Search from "./Search";
 
 const Home = () => {
   return (
@@ -15,14 +16,20 @@ const Home = () => {
         <div className="home__headerRight">
           <Link to="/gmail">Gmail</Link>
           <Link to="/images">Images</Link>
-          <AppsIcon/>
-          <Avatar/>
+          <AppsIcon />
+          <Avatar />
           {/* Icon */}
           {/* Avatar */}
         </div>
       </div>
       <div className="home__body">
-          <img src='https://www.freepnglogos.com/uploads/google-logo-png/file-google-logo-svg-wikimedia-commons-23.png' alt="Google Logo" />
+        <img
+          src="https://www.freepnglogos.com/uploads/google-logo-png/file-google-logo-svg-wikimedia-commons-23.png"
+          alt="Google Logo"
+        />
+        <div className="home__inputContainer">
+          <Search />
+        </div>
       </div>
     </div>
   );
