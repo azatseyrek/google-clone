@@ -1,9 +1,11 @@
-import React from "react";
+import React  from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import AppsIcon from "@material-ui/icons/Apps";
 import { Avatar } from "@material-ui/core";
 import Search from "./Search";
+
+
 
 const Home = () => {
   return (
@@ -18,8 +20,8 @@ const Home = () => {
           <Link to="/images">Images</Link>
           <AppsIcon />
           <Avatar />
-          {/* Icon */}
-          {/* Avatar */}
+
+
         </div>
       </div>
       <div className="home__body">

@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="./search">
+          <Route path="/search">
             <SearchPage />
           </Route>
           <Route exact path="/">
