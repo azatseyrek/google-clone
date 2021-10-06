@@ -1,12 +1,24 @@
-import React from 'react'
-import './SearchPage.css'
+import React from "react";
+import { useStateValue } from "../StateProvider";
+import useGoogleSearch from "../useGoogleSearch";
+import "./SearchPage.css";
 
 const SearchPage = () => {
-    return (
-        <div className='searchPage'>
+  const [{ term }, dispatch] = useStateValue();
+  const {data} = useGoogleSearch(term);
 
-        </div>
-    )
-}
 
-export default SearchPage
+  console.log(data);
+  return (
+    <div className="searchPage">
+      <div className="searchPage__header"></div>
+
+      <div className="searchPage__results"></div>
+    </div>
+  );
+};
+
+export default SearchPage;
+
+
+// AIzaSyBvRuxPslds1qWqqfZyhtrZ7tT08TdLY5Y
